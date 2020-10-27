@@ -10,6 +10,7 @@ namespace CustomListUnitTestStarter
     {
         private T[] items;
         protected int count;
+        protected int capacity;
         public int Capacity { get; set; }
         public int Count
         {
@@ -28,13 +29,17 @@ namespace CustomListUnitTestStarter
         }
 
         public void Add(T item)
-        {
-            //add item that's passed in to the array
-
+        {                                                                       
+            items[count] = item;
+            count++;
+            if (count == capacity)
+            {
+                Capacity = capacity*2;
+            }           
         }
 
 
-
+        //add item that's passed in to the array, double the array Cap when it gets maxed out
     }
 
 
