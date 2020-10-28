@@ -179,6 +179,7 @@ namespace CustomListTests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
+        //[HandleException]
         //attribute for exceptions
         public void Remove_RemoveItemThatDoesntExist_DoNothing()
         {
@@ -189,7 +190,8 @@ namespace CustomListTests
             int actual;
 
             // Act
-            testList.Remove(item);            
+            testList.Add(0);
+            testList.Remove(15);            
             actual = testList[0];
 
             // Assert

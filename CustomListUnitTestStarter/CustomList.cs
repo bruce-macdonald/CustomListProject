@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomListUnitTestStarter
 {
-    public class CustomList<T>
+    public class CustomList<T> /*: IEnumerable*/
     {
         public int index;
         private T[] items;
@@ -44,9 +44,7 @@ namespace CustomListUnitTestStarter
         }
 
         public void Add(T item)
-        {
-            items[count] = item;
-            count++;
+        {          
             if (count == Capacity)
             {
                 Capacity = Capacity * 2;
@@ -59,14 +57,39 @@ namespace CustomListUnitTestStarter
                 for (int i = 0; i < items.Length; i++)
                 {
                     items[i] = tempArray[i];
-                }
+                }               
             }
+            items[count] = item;
+            count++;
         }
 
         public void Remove(T item)
         {
-            count--;
+            bool doItOnce = true;
+            for (int i = 0, j = 0; i < Count; i++, j++)
+            {
+                items[j] = items[i];
+                if (items[i].Equals(item)&&doItOnce)
+                {
+                    doItOnce = false;
+                    j--;
+                }
+            }
+            if(!doItOnce)
+            {
+                count--;
+            }
 	    }
+
+        //public IEnumerable GetEnumerator()
+        //{
+        //    for (int i = 0; i < items.Count; i++)
+        //    {
+        //        yield return items[i];
+        //    }
+        //    yield return items;
+            
+        //}
     }
 
 }
