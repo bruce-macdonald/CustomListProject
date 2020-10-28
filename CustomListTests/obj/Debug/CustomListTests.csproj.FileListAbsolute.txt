@@ -1,0 +1,17 @@
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\bin\Debug\CustomListTests.dll
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\bin\Debug\CustomListTests.pdb
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\bin\Debug\CustomListUnitTestStarter.exe
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\bin\Debug\CustomListUnitTestStarter.pdb
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\bin\Debug\CustomListUnitTestStarter.exe.config
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\obj\Debug\CustomListTests.csprojAssemblyReference.cache
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\obj\Debug\CustomListTests.csproj.CoreCompileInputs.cache
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\obj\Debug\CustomListTests.csproj.CopyComplete
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\obj\Debug\CustomListTests.dll
+D:\DCC Projects\CustomListUnitTestStarter\CustomListTests\obj\Debug\CustomListTests.pdb

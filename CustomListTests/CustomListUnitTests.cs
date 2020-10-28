@@ -133,8 +133,9 @@ namespace CustomListTests
             testList.Add(item5);
             actual = testList[2]; // error expected until "Indexer" is added to class
 
-            // Assert
+            // Assert           
             Assert.AreEqual(expected, actual);
+
         }
 
 

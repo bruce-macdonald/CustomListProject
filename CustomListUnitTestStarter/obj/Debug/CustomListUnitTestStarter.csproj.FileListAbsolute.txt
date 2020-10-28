@@ -1,6 +1,7 @@
-C:\Users\mhein\Desktop\CustomListUnitTestStarter\CustomListUnitTestStarter\bin\Debug\CustomListUnitTestStarter.exe.config
-C:\Users\mhein\Desktop\CustomListUnitTestStarter\CustomListUnitTestStarter\bin\Debug\CustomListUnitTestStarter.exe
-C:\Users\mhein\Desktop\CustomListUnitTestStarter\CustomListUnitTestStarter\bin\Debug\CustomListUnitTestStarter.pdb
-C:\Users\mhein\Desktop\CustomListUnitTestStarter\CustomListUnitTestStarter\obj\Debug\CustomListUnitTestStarter.csprojAssemblyReference.cache
-C:\Users\mhein\Desktop\CustomListUnitTestStarter\CustomListUnitTestStarter\obj\Debug\CustomListUnitTestStarter.exe
-C:\Users\mhein\Desktop\CustomListUnitTestStarter\CustomListUnitTestStarter\obj\Debug\CustomListUnitTestStarter.pdb
+D:\DCC Projects\CustomListUnitTestStarter\CustomListUnitTestStarter\bin\Debug\CustomListUnitTestStarter.exe.config
+D:\DCC Projects\CustomListUnitTestStarter\CustomListUnitTestStarter\bin\Debug\CustomListUnitTestStarter.exe
+D:\DCC Projects\CustomListUnitTestStarter\CustomListUnitTestStarter\bin\Debug\CustomListUnitTestStarter.pdb
+D:\DCC Projects\CustomListUnitTestStarter\CustomListUnitTestStarter\obj\Debug\CustomListUnitTestStarter.csprojAssemblyReference.cache
+D:\DCC Projects\CustomListUnitTestStarter\CustomListUnitTestStarter\obj\Debug\CustomListUnitTestStarter.csproj.CoreCompileInputs.cache
+D:\DCC Projects\CustomListUnitTestStarter\CustomListUnitTestStarter\obj\Debug\CustomListUnitTestStarter.exe
+D:\DCC Projects\CustomListUnitTestStarter\CustomListUnitTestStarter\obj\Debug\CustomListUnitTestStarter.pdb

@@ -8,9 +8,9 @@ namespace CustomListUnitTestStarter
 {
     public class CustomList<T>
     {
+        public int index;
         private T[] items;
         protected int count;
-        protected int capacity;
         public int Capacity { get; set; }
         public int Count
         {
@@ -19,8 +19,18 @@ namespace CustomListUnitTestStarter
                 return count;
             }
         }
+        public T this[int index]
+        {
+            get
+            {
+                return items[index];
+            }
+            set
+            {
+                items[index] = value;
+            }
+        }
 
-        
 
         public CustomList()
         {
@@ -29,13 +39,23 @@ namespace CustomListUnitTestStarter
         }
 
         public void Add(T item)
-        {                                                                       
+        {
             items[count] = item;
             count++;
-            if (count == capacity)
+            if (count == Capacity)
             {
-                Capacity = capacity*2;
-            }           
+                Capacity = Capacity * 2;
+                T[] tempArray = new T[Capacity];
+                for (int i = 0; i < items.Length; i++)
+                {
+                    tempArray[i] = items[i];
+                }                              
+                items = new T[Capacity];
+                for (int i = 0; i < items.Length; i++)
+                {
+                    items[i] = tempArray[i];
+                } 
+            }
         }
 
 
