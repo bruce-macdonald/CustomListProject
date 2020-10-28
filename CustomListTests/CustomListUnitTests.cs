@@ -110,8 +110,6 @@ namespace CustomListTests
             // Assert
             Assert.AreEqual(expected, actual);
         }
-
-
         [TestMethod]
         public void Add_AddItemToListAtMaxCapacity_ArrayAdjustsAndKeepsValuesFromFirstArray()
         {
@@ -135,10 +133,92 @@ namespace CustomListTests
 
             // Assert           
             Assert.AreEqual(expected, actual);
+        }
 
+        // REMOVE TESTS:
+        [TestMethod]
+        public void Remove_RemoveItemFromList_CountDecrementsByOne()
+        {
+            // Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int item = 10;
+            int expected = 1;
+            int actual;
+
+            // Act
+            testList.Add(item);
+            testList.Add(item);
+            testList.Remove(item);
+            actual = testList.Count; 
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Remove_RemoveItemFromList_IndexesSwitchProperly()
+        {
+            // Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int item1 = 13;
+            int item2 = 58;
+            int item3 = 26;
+            int item4 = 44;
+            int expected = 44;
+            int actual;
+
+            // Act
+            testList.Add(item1);
+            testList.Add(item2);
+            testList.Add(item3);
+            testList.Add(item4);
+            testList.Remove(item3);
+            actual = testList[2];
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        //attribute for exceptions
+        public void Remove_RemoveItemThatDoesntExist_DoNothing()
+        {
+            // Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int item = 10;
+            int expected = 0;
+            int actual;
+
+            // Act
+            testList.Remove(item);            
+            actual = testList[0];
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Remove_RemoveDuplicateItem_RemoveFirstInstanceOnly()
+        {
+            // Arrange
+            CustomList<int> testList = new CustomList<int>();                        
+            int expected = 10;
+            int actual;
+
+            // Act
+            testList.Add(10);
+            testList.Add(15);
+            testList.Add(17);
+            testList.Add(14);
+            testList.Add(25);
+            testList.Add(10);
+            testList.Remove(10);
+            actual = testList[4];
+
+            // Assert
+            Assert.AreEqual(expected, actual);
         }
 
 
-        // REMOVE TESTS:
+
     }
 }

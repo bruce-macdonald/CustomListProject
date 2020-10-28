@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,10 @@ namespace CustomListUnitTestStarter
         {
             get
             {
+                if (index < 0 || index > count || count == 0)
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
                 return items[index];
             }
             set
@@ -49,18 +54,25 @@ namespace CustomListUnitTestStarter
                 for (int i = 0; i < items.Length; i++)
                 {
                     tempArray[i] = items[i];
-                }                              
+                }
                 items = new T[Capacity];
                 for (int i = 0; i < items.Length; i++)
                 {
                     items[i] = tempArray[i];
-                } 
+                }
             }
         }
 
-
-        //add item that's passed in to the array, double the array Cap when it gets maxed out
+        public void Remove(T item)
+        {
+            count--;
+	    }
     }
 
-
 }
+
+    //add item that's passed in to the array, double the array Cap when it gets maxed out
+
+
+    
+
