@@ -18,7 +18,7 @@ namespace CustomListTests
 
             // Act
             testList.Add(item);
-            actual = testList[0]; // error expected until "indexer property" is added to class
+            actual = testList[0];
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -35,7 +35,7 @@ namespace CustomListTests
 
             // Act
             testList.Add(item);
-            actual = testList.Count; // error expected until "Count" is added to class
+            actual = testList.Count; 
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -58,7 +58,7 @@ namespace CustomListTests
             testList.Add(item);
             testList.Add(item);
             testList.Add(item);
-            actual = testList.Capacity; // error expected until "Capacity" is added to class
+            actual = testList.Capacity; 
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -82,7 +82,7 @@ namespace CustomListTests
             testList.Add(item1);
             testList.Add(item2);
             testList.Add(item3);
-            actual = testList[2]; // error expected until "indexer property" is added to class
+            actual = testList[2]; 
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -105,7 +105,7 @@ namespace CustomListTests
             testList.Add(item);
             testList.Add(item);
             testList.Add(item);
-            actual = testList.Count; // error expected until "Count" is added to class
+            actual = testList.Count;
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -129,7 +129,7 @@ namespace CustomListTests
             testList.Add(item3);
             testList.Add(item4);
             testList.Add(item5);
-            actual = testList[2]; // error expected until "Indexer" is added to class
+            actual = testList[2];
 
             // Assert           
             Assert.AreEqual(expected, actual);
@@ -220,7 +220,37 @@ namespace CustomListTests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void ToString__GiveACustomList_CustomListIsConvertedToString()
+        {
+            // Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int item = 10;
+            string expected = "10";
+            string actual;
+            // Act
+            testList.Add(item);
+            actual = testList.ToString();
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
 
 
+        [TestMethod]
+        public void ToString__GiveACustomListOfMultipleItems_CustomListIsConvertedToString()
+        {
+            // Arrange
+            CustomList<bool> testList = new CustomList<bool>();            
+            bool thing1 = false;
+            bool thing2 = true;
+            string expected = "falsetrue";
+            string actual;
+            // Act
+            testList.Add(thing1);
+            testList.Add(thing2);
+            actual = testList.ToString();
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

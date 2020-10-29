@@ -81,6 +81,17 @@ namespace CustomListUnitTestStarter
             }
 	    }
 
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < count; i++)
+            {
+                sb.Append(items[i].ToString());
+                Console.WriteLine(sb);
+            }
+            return sb.ToString();
+        }
+
         //public IEnumerable GetEnumerator()
         //{
         //    for (int i = 0; i < items.Count; i++)
@@ -88,13 +99,13 @@ namespace CustomListUnitTestStarter
         //        yield return items[i];
         //    }
         //    yield return items;
-            
+
         //}
     }
 
 }
 
-    //add item that's passed in to the array, double the array Cap when it gets maxed out
+   
 
 
     
