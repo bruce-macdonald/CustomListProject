@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CustomListUnitTestStarter
 {
-    public class CustomList<T> /*: IEnumerable*/
+    public class CustomList<T> : IEnumerable
     {
         public int index;
         private T[] items;
@@ -92,15 +93,13 @@ namespace CustomListUnitTestStarter
             return sb.ToString();
         }
 
-        //public IEnumerable GetEnumerator()
-        //{
-        //    for (int i = 0; i < items.Count; i++)
-        //    {
-        //        yield return items[i];
-        //    }
-        //    yield return items;
-
-        //}
+        public IEnumerator GetEnumerator()
+        {
+            for (int i = 0; i < items.Length; i++)
+            {
+                yield return items[index];
+            }
+        }
 
 
         public static CustomList<T> operator +(CustomList<T> list1, CustomList<T> list2)
