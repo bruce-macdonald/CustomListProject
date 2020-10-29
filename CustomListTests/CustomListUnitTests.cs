@@ -185,7 +185,6 @@ namespace CustomListTests
         {
             // Arrange
             CustomList<int> testList = new CustomList<int>();
-            int item = 10;
             int expected = 0;
             int actual;
 
@@ -277,5 +276,34 @@ namespace CustomListTests
             // Assert
             Assert.AreEqual(expected.ToString(), actual.ToString());
         }
+
+        [TestMethod]
+        public void MinusOperator__GiveMultipleListsThenSubtractOne_SubtractedDataWillBeGone()
+        {
+            // Arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            int item1 = 1;
+            int item2 = 2;
+            int item3 = 3;
+            int item5 = 5;
+            int item6 = 6;
+            CustomList<int> expected = new CustomList<int>();
+            CustomList<int> actual = new CustomList<int>();
+            // Act
+            expected.Add(item3);
+            expected.Add(item5);
+            testList1.Add(item1);
+            testList1.Add(item3);
+            testList1.Add(item5);
+            testList2.Add(item1);
+            testList2.Add(item2);
+            testList2.Add(item6);
+            actual = testList1 - testList2;
+            // Assert
+            Assert.AreEqual(expected.ToString(), actual.ToString());
+        }
+
+
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -102,12 +103,12 @@ namespace CustomListUnitTestStarter
         //}
 
 
-        public static CustomList<T> operator+ (CustomList<T>list1, CustomList<T>list2)
+        public static CustomList<T> operator +(CustomList<T> list1, CustomList<T> list2)
         {
             CustomList<T> result = new CustomList<T>();
             for (int i = 0; i < list1.count; i++)
-            {    
-                result.Add(list1[i]);   
+            {
+                result.Add(list1[i]);
             }
             for (int i = 0; i < list2.count; i++)
             {
@@ -116,7 +117,40 @@ namespace CustomListUnitTestStarter
             return result;
         }
 
-    } }
+        public static CustomList<T> operator- (CustomList<T> list1, CustomList<T> list2)
+        {
+            CustomList<T> result = new CustomList<T>();
+            for (int i = 0; i < list1.count; i++)
+            {
+                result.Add(list1[i]);
+            }
+            for (int i = 0; i < list2.count; i++)
+            {
+                if (list2.DoesContain(list1[i]))
+                {
+                    result.Remove(list2[i]); 
+                }
+            }
+            return result;
+        }
+        
+
+
+
+        public bool DoesContain(T item)
+        {
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (items[index].Equals(item))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+}   }
 
    
 
