@@ -240,7 +240,7 @@ namespace CustomListTests
         public void ToString__GiveACustomListOfMultipleItems_CustomListIsConvertedToString()
         {
             // Arrange
-            CustomList<bool> testList = new CustomList<bool>();            
+            CustomList<bool> testList = new CustomList<bool>();
             bool thing1 = false;
             bool thing2 = true;
             string expected = "falsetrue";
@@ -251,6 +251,31 @@ namespace CustomListTests
             actual = testList.ToString();
             // Assert
             Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestMethod]
+        public void PlusOperator__GiveMultipleLists_ListsAreAddedTogether()
+        {
+            // Arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            int item1 = 12;
+            int item2 = 16;
+            CustomList<int> expected = new CustomList<int>();
+            CustomList<int> actual = new CustomList<int>();
+            // Act
+            expected.Add(item1);
+            expected.Add(item2);
+            expected.Add(item1);
+            expected.Add(item2);
+            testList1.Add(item1);
+            testList1.Add(item2);
+            testList2.Add(item1);
+            testList2.Add(item2);
+            actual = testList1 + testList2;
+            // Assert
+            Assert.AreEqual(expected.ToString(), actual.ToString());
         }
     }
 }
